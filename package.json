@@ -1,0 +1,24 @@
+{
+  "name": "pretix",
+  "version": "0.0.2",
+  "description": "A Zapier integration for the pretix ticket shop.",
+  "repository": "pretix/zapier-pretix",
+  "homepage": "https://zapier.com/",
+  "author": "Raphael Michel <michel@rami.io>",
+  "license": "Apache License",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "engines": {
+    "node": "8.10.0",
+    "npm": ">=5.6.0"
+  },
+  "dependencies": {
+    "zapier-platform-core": "7.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.0"
+  }
+}
