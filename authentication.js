@@ -58,7 +58,7 @@ const testAuth = (z /*, bundle*/) => {
     // every user will have access to, such as an account or profile endpoint like /me.
     const promise = z.request({
         method: 'GET',
-        url: `${process.env.BASE_URL}/api/v1/organizers/`,
+        url: `${process.env.BASE_URL}/api/v1/me`,
     });
 
     // This method can return any truthy value to indicate the credentials are valid.
@@ -83,7 +83,7 @@ module.exports = {
                 client_id: '{{process.env.CLIENT_ID}}',
                 state: '{{bundle.inputData.state}}',
                 redirect_uri: '{{bundle.inputData.redirect_uri}}',
-                scope: 'read',
+                scope: 'read write',
                 response_type: 'code'
             }
         },
@@ -103,5 +103,5 @@ module.exports = {
     // method after the OAuth flow is complete to ensure everything is setup properly.
     test: testAuth,
     // assuming "username" is a key returned from the test
-    connectionLabel: 'pretix'
+    connectionLabel: '{{email}}'
 };

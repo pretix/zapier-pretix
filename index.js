@@ -4,6 +4,7 @@ process.env.CLIENT_ID = process.env.CLIENT_ID || '1234';
 process.env.CLIENT_SECRET = process.env.CLIENT_SECRET || 'asdf';
 
 const authentication = require('./authentication');
+const OrderPlaced = require('./triggers/orderPlaced');
 
 // To include the Authorization header on all outbound requests, simply define a function here.
 // It runs runs before each request is sent out, allowing you to make tweaks to the request in a centralized spot
@@ -28,10 +29,13 @@ const App = {
 
     afterResponse: [],
 
-    resources: {},
+    resources: {
+    },
 
     // If you want your trigger to show up, you better include it here!
-    triggers: {},
+    triggers: {
+        [OrderPlaced.key]: OrderPlaced,
+    },
 
     // If you want your searches to show up, you better include it here!
     searches: {},
