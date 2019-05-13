@@ -7,8 +7,8 @@ const getAccessToken = (z, bundle) => {
             grant_type: 'authorization_code'
         },
         headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'authorization': 'Basic ' + Buffer.from(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET).toString('base64')
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + Buffer.from(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET).toString('base64')
         }
     });
 
@@ -34,8 +34,8 @@ const refreshAccessToken = (z, bundle) => {
             grant_type: 'refresh_token'
         },
         headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'authorization': 'Basic ' + new Buffer(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET).toString('base64')
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + new Buffer(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET).toString('base64')
         }
     });
 
