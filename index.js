@@ -10,7 +10,7 @@ const OrderPlacedPosition = require('./triggers/orderPlacedPosition');
 // To include the Authorization header on all outbound requests, simply define a function here.
 // It runs runs before each request is sent out, allowing you to make tweaks to the request in a centralized spot
 const includeBearerToken = (request, z, bundle) => {
-    if (bundle.authData.access_token) {
+    if (bundle.authData.access_token && !request.headers.Authorization) {
         request.headers.Authorization = `Bearer ${bundle.authData.access_token}`;
     }
     return request;
