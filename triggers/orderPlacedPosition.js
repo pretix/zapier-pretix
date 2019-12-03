@@ -70,7 +70,7 @@ const getFallbackRealOrderPositions = (z, bundle) => {
                     return [];
                 }
                 bundle.inputData.eventSlug = events[0].slug;
-                return getFallbackRealOrder(z, bundle);
+                return getFallbackRealOrderPositions(z, bundle);
             });
     } else {
         var url = process.env.BASE_URL + `/api/v1/organizers/${bundle.inputData.organizerSlug}/events/${bundle.inputData.eventSlug}/orders/`;
