@@ -86,8 +86,11 @@ const getFallbackRealOrderPositions = (z, bundle) => {
                 items.forEach(item => {
                     item.id = eventSlug + "-" + item.code;
                 });
-				items.forEach(positionsFromOrder);
-                return items;
+                var all = [];
+				items.forEach(item => {
+				    all.push(...positionsFromOrder(item))
+                });
+                return all;
             });
     }
 };
@@ -156,9 +159,12 @@ module.exports = {
 			"item": 1345,
 			"variation": null,
 			"price": "23.00",
-			"attendee_name": "Peter",
+			"attendee_name": "Peter Miller",
 			"attendee_name_parts": {
-				"full_name": "Peter",
+				"full_name": "Peter Miller",
+                "family_name": "Peter",
+                "given_name": "Miller",
+                "title": "Dr.",
 				"_scheme": "full_name"
 			},
 			"attendee_email": null,
