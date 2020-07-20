@@ -101,7 +101,7 @@ module.exports = {
     noun: 'Order Position',
     display: {
         label: 'Order Placed With Position',
-        description: 'Triggers for every position when a new order is placed.'
+        description: 'Triggers when a new order is placed, once for every position in the order.'
     },
 
     operation: {
