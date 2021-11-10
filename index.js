@@ -6,6 +6,8 @@ process.env.CLIENT_SECRET = process.env.CLIENT_SECRET || 'asdf';
 const authentication = require('./authentication');
 const OrderPlaced = require('./triggers/orderPlaced');
 const OrderPlacedPosition = require('./triggers/orderPlacedPosition');
+const OrderApproved = require('./triggers/orderApproved');
+const OrderApprovedPosition = require('./triggers/orderApprovedPosition');
 
 // To include the Authorization header on all outbound requests, simply define a function here.
 // It runs runs before each request is sent out, allowing you to make tweaks to the request in a centralized spot
@@ -37,6 +39,8 @@ const App = {
     triggers: {
         [OrderPlaced.key]: OrderPlaced,
         [OrderPlacedPosition.key]: OrderPlacedPosition,
+        [OrderApproved.key]: OrderApproved,
+        [OrderApprovedPosition.key]: OrderApprovedPosition,
     },
 
     // If you want your searches to show up, you better include it here!
