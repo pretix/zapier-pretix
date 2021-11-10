@@ -1,6 +1,6 @@
 {
   "name": "pretix",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A Zapier integration for the pretix ticket shop.",
   "repository": "pretix/zapier-pretix",
   "homepage": "https://zapier.com/",
