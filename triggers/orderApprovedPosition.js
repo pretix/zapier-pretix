@@ -36,7 +36,7 @@ const positionsFromOrder = (orderData) => {
 	var result = [];
 	orderData.positions.forEach(pos => {
 		for (var key in orderData) {
-			if (key != 'positions' && typeof key[pos] === "undefined") {
+			if (key != 'positions' && typeof pos[key] === "undefined") {
 				pos[key] = orderData[key];
 			}
 			pos.id = orderData.code + '-' + pos.positionid;
