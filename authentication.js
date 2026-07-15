@@ -3,7 +3,7 @@ const getAccessToken = (z, bundle) => {
         method: 'POST',
         body: {
             code: bundle.inputData.code,
-            redirect_uri: '{{bundle.inputData.redirect_uri}}',
+            redirect_uri: bundle.inputData.redirect_uri,
             grant_type: 'authorization_code'
         },
         headers: {
