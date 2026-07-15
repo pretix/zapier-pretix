@@ -1,3 +1,7 @@
+## 0.4.1
+
+Update zapier-platform version
+
 ## 0.4.0
 
 On orderPlacedPosition and orderApprovedPosition, the order fields no longer overwrite position fields.

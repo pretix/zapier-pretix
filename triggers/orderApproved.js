@@ -224,7 +224,7 @@ module.exports = {
             {key: 'expires', label: 'Order payment deadline'},
             {key: 'total', label: 'Order total'},
             {key: 'email', label: 'Order email'},
-            {key: 'require_approval', label: 'Requires approval'},
+            {key: 'require_approval', label: 'Requires approval', type: 'boolean'},
             {key: 'invoice_address__company', label: 'Invoice address: company'},
             {key: 'invoice_address__name', label: 'Invoice address: name'},
             {key: 'invoice_address__street', label: 'Invoice address: street'},
