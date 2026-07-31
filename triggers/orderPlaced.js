@@ -145,10 +145,14 @@ module.exports = {
                     "item": 1345,
                     "variation": null,
                     "price": "23.00",
-                    "attendee_name": "Peter",
+                    "attendee_name": "Peter Miller",
                     "attendee_name_parts": {
-                        "full_name": "Peter",
-                        "_scheme": "full_name"
+                        "full_name": "Peter Miller",
+                        "family_name": "Peter",
+                        "given_name": "Miller",
+                        "salutation": "Mr",
+                        "title": "Dr.",
+                        "_scheme": "full_name"        
                     },
                     "attendee_email": null,
                     "voucher": null,

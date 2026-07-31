@@ -162,9 +162,10 @@ module.exports = {
 			"attendee_name": "Peter Miller",
 			"attendee_name_parts": {
 				"full_name": "Peter Miller",
-                "family_name": "Peter",
-                "given_name": "Miller",
-                "title": "Dr.",
+				"family_name": "Peter",
+				"given_name": "Miller",
+				"salutation": "Mr",
+				"title": "Dr.",
 				"_scheme": "full_name"
 			},
 			"attendee_email": null,
